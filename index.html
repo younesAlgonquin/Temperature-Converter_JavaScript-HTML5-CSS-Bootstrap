@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Bootstrap and JavaScript </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Computer Engineering Technology - Computing Science <br /> Web Programming</h1>
+  
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+	
+	<div class="col-sm-4">
+
+	<nav class="navbar navbar-expand-sm bg-light-grey navbar-dark" style="background:Gainsboro; margin-top:5%">
+
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navflex-column">
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Lab2/index.html">Lab2</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="http://younesb.sgedu.site/Lab3/index.html">Lab3</a>
+		  </li>
+		</ul>
+	  </div>  
+	</nav>
+	</div>
+	
+    <div class="col-sm-8" style="margin-top:2%">
+		  <script type="text/javascript">
+
+	function converttemperature()
+			{	
+				let unit = prompt("Please enter a temperature unit (1:to convert to celsius, 2:to convert to fahrenheit)");
+				if (isNaN(parseFloat(unit)) || (unit!=1 && unit!=2)){
+					do {
+						unit = prompt("Invalid option. Please enter 1:to convert to celsius, 2:to convert to fahrenheit.");
+					 } while (isNaN(parseFloat(unit)) || (unit!=1 && unit!=2));	
+					}
+					
+				let tempValue = prompt("Please enter a temperature value to be converted to celsius/fahrenheit)");
+				if (isNaN(parseFloat(tempValue))){
+					do {
+						tempValue = prompt("You did not enter a number. Enter a number to continue.");
+					 } while (isNaN(parseFloat(tempValue)));	
+					}
+					
+				let convertedtemp;
+				
+				if(unit == 1){
+				
+				convertedtemp = 5/9*(tempValue-32);
+				alert(tempValue + " fahrenheit converted to " + convertedtemp + " celsius");
+				}else if (unit == 2){
+				convertedtemp = (tempValue*9/5) + 32;
+				alert(tempValue + " celsius converted to " + convertedtemp + " fahrenheit");
+				}
+				
+				
+			}	
+	</script> 
+	  
+	</head>
+
+	<body>
+
+	 
+		  <h3>Temperature Converter Using Bootstrap Template</h3> 
+		  <h3>  ------------------------------------------------------</h3>	  
+			<h4>This program converts from Celsius to Fahrenheit and vice versa</h4>
+			   <h4>  -------------------------------------------------------------</h4>
+			   <h5>Please click Convert button to perform temperature conversion</h5>
+			   <h5>  -------------------------------------------------------------</h5>
+			   
+			  <table>      
+				<tr>
+					<td><input onclick="converttemperature()" name="btnConvert" id="btnConvert" value="Convert!" type="button"></td>				
+				</tr>       
+			  </table>
+        
+
+
+
+</body>
+    </div>
+    
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p> <h1> Footer </h1> </p>
+  <p> <h5>041019068</h5></p>
+  <p> <h5>Younes Boutaleb </h5></p>
+  <p> <h5>bout0144@algonquinlive.com </h5></p>
+  
+</div>
+
+</body>
+</html>
